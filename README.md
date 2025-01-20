@@ -99,3 +99,9 @@ The optimization process generates:
 ### **6. Contact**
 
 For questions or further assistance, please contact [Mafalda Gonçalves](mafalda.goncalves@ua.pt).
+
+---
+
+### **7. Information**
+- Buckling constraint is not fully implemented.
+- Some results are shared with the name `Case1_total_homogeneous`. The .mat file provides the results and parameters of the analysis while the .gif file displays the evolution of the design process. 
