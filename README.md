@@ -57,49 +57,29 @@ These additional scripts extend the main optimization process with specific feat
 These parameters need to be detailed in the input file:
 
 - `Filename`: Problem name
-- 
+  
+- **Domain geometry and boundary conditions**:
+  - `Domain`: x,y - number of elements in x and y
+  - `Domain Type`: tot or sym, in case of total domain or only a quarter
+  - `Springs`: spring_in, spring_out for the numerical stiffness values of the artificial springs in the input and output locations.
+  - `BCs`: number of applied displacements (usually, 2)
+  - `Fin`: load applied by the grips
+    
 - **Material Properties**:
-  - `E`: Young's modulus.
-  - `nu`: Poisson's ratio.
+  - `Material`: E, nu.
+    - `E`: Young's modulus.
+    - `nu`: Poisson's ratio.
 
 - **Optimization Settings**:
   - `Vol`: Target volume fraction.
   - `Penal`: Penalization factor for intermediate densities.
   - `Radius`: Filter radius for sensitivity filtering.
+  - `Constraints`: V, B and/or D, for volume, buckling, and damage constraints. 
 
-
-
-
-
-**Filename
-Case1_total_homogeneous
-**Domain
-50,50
-**Domain Type
-tot
-**Material
-210e3,0.3
-
-**Springs
-1e4,1e4
-
-**Constraints
-V
-
-**BCs
-2
-**Fin
-20
-**Analysis_type
-n
-**Material_behavior
-n
-**Integration_type
-f
-
-
-
-
+- **Analysis settings**:
+  - `Analysis_type`: n or l, for nonlinear or linear analysis.
+  - `Material behavior`: l or n, for linear elastic or nonlinear material behavior (isotropic hardening and plasticity implemented).
+  - `Integration_type`: f or r, for full or reduced integration.
 
 
 These parameters can be adjusted within the input file .dat, which needs to be in the `Input` folder.
