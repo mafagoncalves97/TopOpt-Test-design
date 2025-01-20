@@ -38,38 +38,75 @@ These additional scripts extend the main optimization process with specific feat
 
 ---
 
-### **4. Installation and Usage**
+### **3. Installation and Usage**
 
 1. **Set Up MATLAB Environment**:
    - Open MATLAB.
    - Navigate to the code folder.
 
-3. **Prepare Input File**:
+2. **Prepare Input File**:
    A `.dat` file with the problem settings (details in the parameters section) is required and must be placed in the `Input` folder.
 
-4. **Run the Main Script**:
+3. **Run the Main Script**:
    Execute the main script (**`main.pt`**)
 
 ---
 
-### **5. Parameters**
+### **4. Parameters**
 
-Key parameters influencing the optimization include:
+These parameters need to be detailed in the input file:
 
+- `Filename`: Problem name
+- 
 - **Material Properties**:
   - `E`: Young's modulus.
   - `nu`: Poisson's ratio.
 
 - **Optimization Settings**:
-  - `volfrac`: Target volume fraction.
-  - `penal`: Penalization factor for intermediate densities.
-  - `rmin`: Filter radius for sensitivity filtering.
+  - `Vol`: Target volume fraction.
+  - `Penal`: Penalization factor for intermediate densities.
+  - `Radius`: Filter radius for sensitivity filtering.
+
+
+
+
+
+**Filename
+Case1_total_homogeneous
+**Domain
+50,50
+**Domain Type
+tot
+**Material
+210e3,0.3
+
+**Springs
+1e4,1e4
+
+**Constraints
+V
+
+**BCs
+2
+**Fin
+20
+**Analysis_type
+n
+**Material_behavior
+n
+**Integration_type
+f
+
+
+
+
+
 
 These parameters can be adjusted within the input file .dat, which needs to be in the `Input` folder.
 
 ---
 
-### **6. Output**
+### **5. Output**
 
 The optimization process generates:
 
@@ -79,6 +116,6 @@ The optimization process generates:
 
 ---
 
-### **7. Contact**
+### **6. Contact**
 
 For questions or further assistance, please contact [Mafalda Gonçalves](mafalda.goncalves@ua.pt).
