@@ -38,3 +38,47 @@ These additional scripts extend the main optimization process with specific feat
 
 ---
 
+### **4. Installation and Usage**
+
+1. **Set Up MATLAB Environment**:
+   - Open MATLAB.
+   - Navigate to the code folder.
+
+3. **Prepare Input File**:
+   A `.dat` file with the problem settings (details in the parameters section) is required and must be placed in the `Input` folder.
+
+4. **Run the Main Script**:
+   Execute the main script (**`main.pt`**)
+
+---
+
+### **5. Parameters**
+
+Key parameters influencing the optimization include:
+
+- **Material Properties**:
+  - `E`: Young's modulus.
+  - `nu`: Poisson's ratio.
+
+- **Optimization Settings**:
+  - `volfrac`: Target volume fraction.
+  - `penal`: Penalization factor for intermediate densities.
+  - `rmin`: Filter radius for sensitivity filtering.
+
+These parameters can be adjusted within the input file .dat, which needs to be in the `Input` folder.
+
+---
+
+### **6. Output**
+
+The optimization process generates:
+
+- **Design Variables**: Optimal material distribution matrix.
+- **Performance Metrics**: Objective function values and constraint violations.
+- **Visualization Files**: Graphs and plots illustrating the optimization progress and results.
+
+---
+
+### **7. Contact**
+
+For questions or further assistance, please contact [Mafalda Gonçalves](mafalda.goncalves@ua.pt).
